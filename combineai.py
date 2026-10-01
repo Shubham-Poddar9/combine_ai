@@ -7,8 +7,8 @@ from huggingface_hub import InferenceClient
 st.set_page_config(page_title="AI Mastermind Hub",page_icon="🤖",layout="centered")
 
 try:
-    GROQ_API_KEY="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"
-    HF_API_KEY="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"
+    GROQ_API_KEY=st.secrets["GROQ_API_KEY"]
+    HF_API_KEY=st.secrets["API_KEY"]
 except Exception:
     st.error(
         "API keys are missing. Create .streamlit/secrets.toml "
